@@ -1,13 +1,16 @@
-function addBook(){    
-    const book1=new Books();
-    book1.title=document.getElementById(idTitle).value;
-    book1.author=document.getElementById(idAuthor).value;
+function addBook(idTitle,idAuthor){    
+   var labelTitle=document.createElement("label");
+   labelTitle.innerText=idTitle.value;
 
+   var labelAuthor=document.createElement("label");
+   labelAuthor.innerText=idAuthor.value;
+
+   var btnRemove=document.createElement("button");
+    btnRemove.innerHTML="Remove";
+   document.body.appendChild(labelTitle);
+   document.body.appendChild(labelAuthor);
+
+   document.body.appendChild(btnRemove)
 }   
-function Books (title, author){
-    this.title=title,
-    this.author=author
-}
 
-let storage=[]
-[book1.title, book1.title];
+
