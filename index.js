@@ -16,9 +16,10 @@ function addBook(){
     }
     const titleCapture=document.getElementById("idTitle").value;
     const authorCapture=document.getElementById("idAuthor").value;
-   
+    
+
     objBook=new Book(titleCapture,authorCapture);
-    console.log(objBook);
+    // console.log(objBook);
     add();
 
     // console.log(objBook);
@@ -48,7 +49,7 @@ function addBook(){
     // document.body.appendChild(btnRemove);
 }   
 
-var arrBooks=[];
+var arrBooks=[]; 
 function add(){
      arrBooks.push(objBook);
      console.log(arrBooks);
