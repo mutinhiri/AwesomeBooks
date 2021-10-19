@@ -7,19 +7,26 @@
   <title>Awesome books</title>
 </head>
 <body>
-  <div>
-   <ul>
-    
-   </ul>
+  <div >
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+        </tr> 
+      </thead>
+    </table>
   </div>
   <div>
-    <input type="text" id="idTitle" >
-    <br>
-    <br>
-    <input type="text" id="idAuthor">
-    <br>
-    <br>
-    <button id="add" onclick="addBook(idTitle,idAuthor)"> Add </button>
+    <form action="">
+      <input type="text" id="idTitle" >
+      <br>
+      <br>
+      <input type="text" id="idAuthor">
+      <br>
+      <br>
+      <button id="btnAdd" onclick="addBook();"> Add </button>
+    </form>
   </div>
 </body>
 <script src="index.js"></script>
