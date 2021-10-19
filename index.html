@@ -4,32 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awesome books</title>
-  <link rel="stylesheet" href="style.css">
+  <title>awesome books </title>
 </head>
 <body>
-  <div >
-    <table id="table">
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Remove</th>
-        </tr> 
-      </thead>
-    </table>
-  </div>
-  <div>
-    <!-- <form> -->
-      <input type="text" id="idTitle" >
-      <br>
-      <br>
-      <input type="text" id="idAuthor">
-      <br>
-      <br>
-      <button id="btnAdd" onclick="addBook();"> Add </button>
-    <!-- </form> -->
-  </div>
-</body> 
-<script src="index.js"></script>
+  <h1>Awesome books</h1>
+
+  <fieldset id="list">
+    <legend>Books</legend>
+    <div class="black-border">
+      <ul id="booklist" class="flex-center"></ul>
+    </div>
+  </fieldset>
+
+  <br>
+  <fieldset>
+    <legend>Add books</legend>
+    <input type="text" id="title" required placeholder="Book title">
+    <input type="text" id="author" required placeholder="Book author">
+    <button id="btnAdd" type="button">Add</button>
+  </fieldset>
+  <script src="index.js"></script>
+</body>
 </html>
