@@ -21,6 +21,7 @@ function addBook(){
     objBook=new Book(titleCapture,authorCapture);
     // console.log(objBook);
     add();
+    remove();
 
     // console.log(objBook);
 
@@ -53,8 +54,19 @@ var arrBooks=[];
 function add(){
      arrBooks.push(objBook);
      console.log(arrBooks);
-    document.getElementById("table").innerHTML += '<tbody><td>'+objBook.title+'</td> <td>'+objBook.author+'</td></tbody>';
+    document.getElementById("table").innerHTML += '<tbody class="insert-data"><td>'+objBook.title+'</td> <td>'+objBook.author+'</td><button id = "remove-btn">remove</button></tbody>';
 };
- 
 
 
+
+function remove (){
+    remove = document.getElementById('remove-btn')
+    let insert = document.querySelector('.insert-data')
+    arrBooks.forEach(element => {
+        remove.addEventListener('click', function(){
+            console.log("remove")
+            insert.classList.toggle('hide')
+            remove.classList.toggle('hide')
+        })
+    });
+}
