@@ -46,6 +46,7 @@ window.onload = (event) => {
     bookList.push(book1);
     console.log(bookList);
   });  
+  removeBook()
 };
 
 function addBook(){
