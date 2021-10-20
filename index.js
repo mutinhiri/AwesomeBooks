@@ -1,53 +1,67 @@
 class Book {
-  constructor(title, author){
+  constructor(title, author) {
+    this.id = (new Date()).getTime();
     this.title = title;
-    this.author = author
+    this.author = author;
   }
 }
-
-const itemList = document.getElementById('booklist')
-const li = (title, author) =>{
-  const list = document.createElement('li')
-  list.id = id
-  list.className = 'list'
-  list.innerText = `${title} of by ${author}`
-  const button= document.createElement('button')
+const bookList = document.getElementById('booklist');
+const addLi = (id, title, author) => {
+  const list = document.createElement('li');
+  list.id = id;
+  list.className = 'books-lists';
+  list.innerText = `"${title}"  authored by   ${author}`;
+  const button = document.createElement('button');
   button.type = 'button';
-  button.innerText = 'remove'
-  list.appendChild(button)
-  return list
-}
-
-class BookCollection {
-  constructor(){
+  button.innerText = 'Delete';
+  list.appendChild(button);
+  return list;
+};
+class AllBooks {
+  constructor() {
     this.data = [];
   }
-  addBook(title, author){
+
+  addBook(title, author) {
     this.data.push(new Book(title, author));
-    document.getElementById('title').value = ''
-    document.getElementById('author').value = ''
-    this.update()
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
+    this.refresh();
   }
 
-  removeBook(){
-    this.data =this.data.filter()
-    this.update()
+  removeBook(id) {
+    this.data = this.data.filter((el) => el.id !== id);
+    this.refresh();
   }
 
-  update(){
-    itemList.innerHTML = '';
-    localStorage.setItem('list', JSON.stringify(this.data))
-    this.data.forEach((book) =>{
-      itemList.appendChild(li(book.title, book.author))
-    })
+  refresh() {
+    bookList.innerHTML = '';
+    localStorage.setItem('books', JSON.stringify(this.data));
+    this.data.forEach(
+      (book) => {
+        bookList.appendChild(addLi(book.id, book.title, book.author));
+      },
+    );
   }
 }
-
-const BookList = new BookCollection()
-BookCollection.addEventListener('click', (e)=>{
-  const item = e.target
-  if(item.tagName === 'button'){
-    item.closest('li').remove()
-    BookCollection.removeBook(parseInt(item.closest('li').id))
+const BooksList = new AllBooks();
+bookList.addEventListener('click', (e) => {
+  const tgt = e.target;
+  if (tgt.tagName === 'BUTTON') {
+    tgt.closest('li').remove();
+    BooksList.removeBook(parseInt(tgt.closest('li').id, 10));
   }
-})
+}, false);
+
+document.getElementById('btnAdd').addEventListener('click', () => {
+  BooksList.addBook(document.getElementById('title').value, document.getElementById('author').value);
+}, false);
+
+window.onload = () => {
+  if (localStorage.getItem('books') === null) {
+    localStorage.setItem('books', JSON.stringify([]));
+  } else {
+    BooksList.data = JSON.parse(localStorage.books);
+    BooksList.refresh();
+  }
+};
