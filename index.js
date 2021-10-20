@@ -38,32 +38,14 @@ window.onload = (event) => {
     contain.appendChild(title);
     contain.appendChild(author);
     contain.appendChild(remove);
-    showFiel.appendChild(contain)
-   
-  });
-//   let i=100;
-//   myData.forEach(function(elem) {
-      
-//     console.log(i);
-//     console.log(elem.title);
-//     console.log(elem.author);
-//     // e.title; 
-//     // e.author;
-//     console.log(book2);
-//     book2.title=elem.title; 
-//     book2.author=elem.author;
-//     console.log(book2.title);
-//     console.log(book2.author);
-//     console.log('Before book2');
-//     console.log(book2);
-//     console.log('Book list before');
-//     console.log(bookList2);
-//     bookList2.push(i);
-//     console.log("bookLISTT");
-//     console.log(bookList2);
-//     i=i+1;
-//   });
-  
+    showFiel.appendChild(contain);
+
+    const book1 = new Book();
+    book1.title = e.title;
+    book1.author = e.author;
+    bookList.push(book1);
+    console.log(bookList);
+  });  
 };
 
 function addBook(){
@@ -99,11 +81,16 @@ function pushContent(){
 };
 
 function removeBook(){
+  console.log("removeee");
+  let myDataJason=localStorage.getItem('list');
+  let myData=JSON.parse(myDataJason);
+  console.log(myData);
   const removeBtn = document.querySelectorAll('.remove');
   for (let i = 0; i<removeBtn.length; i+=1){
     removeBtn[i].addEventListener('click', ()=>{
       bookList.splice(bookList[removeBtn[i]], 1);
       removeBtn[i].parentNode.remove();
+      // myData.removeItem();
       saveLocal()
     })
   }
