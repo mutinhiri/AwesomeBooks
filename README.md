@@ -35,8 +35,8 @@
 👤 **Jasem Valencia**
 
 - GitHub: [@Jasem Valencia](https://github.com/JasemDuncan)
-- Twitter: [@Bunbee2271](https://twitter.com/@Bunbee2271)
-- LinkedIn: [barnabas mutinhiri](https://linkedin.com/in/bunbee)
+- Twitter: [@Jasem Valencia](https://twitter.com/JasemValencia)
+- LinkedIn: [Jasem Valecia](https://www.linkedin.com/in/jasem-duncan-valencia/)
 
 ## 🤝 Contributing
 
