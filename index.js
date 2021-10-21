@@ -10,7 +10,7 @@ const addLi = (id, title, author) => {
   const list = document.createElement('li');
   list.id = id;
   list.className = 'books-lists';
-  list.innerText = `"${title}"  authored by   ${author}`;
+  list.innerText = `"${title}"  by   ${author}`;
   const button = document.createElement('button');
   button.type = 'button';
   button.innerText = 'remove';
