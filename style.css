@@ -2,13 +2,13 @@ body {
   font-family: 'Balsamiq Sans', cursive;
 }
 
-.hide {
+/* .hide {
   display: none;
-}
-
+} */
+/* 
 p:nth-of-type(2) {
   background: red;
-}
+} */
 
 .full-content {
   display: flex;
@@ -23,7 +23,7 @@ p:nth-of-type(2) {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 60%;
   margin: 0;
   padding: 0;
   border: 3px solid;
@@ -57,6 +57,7 @@ p:nth-of-type(2) {
   width: 100%;
   margin: 3px;
   padding: 5px;
+  font-weight: bold;
 }
 
 .add-new-book {
@@ -64,7 +65,7 @@ p:nth-of-type(2) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 80%;
   margin: 0;
   padding: 0;
   border: 0;
@@ -94,6 +95,16 @@ p:nth-of-type(2) {
   border-width: 4px;
   border-color: black;
   padding: 5px;
+  font-size: 17px;
+}
+
+.remove-btn{
+  margin: 0;
+  width: 20%;
+  border-width: 4px;
+  border-color: black;
+  padding: 5px;
+  font-size: 17px;
 }
 
 #booklist :nth-of-type(odd) {
@@ -107,4 +118,80 @@ p:nth-of-type(2) {
   font-style: italic;
   height: 3px;
   background-color: #333;
+}
+
+.navigation-menu{
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-between;
+  /* align-content: center; */
+  align-items: center;
+  width: 100%;
+  /* background-color: blanchedalmond; */
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  border: solid;
+}
+
+h2{
+  width: 30%;
+  /* background-color: blue; */
+  height: 80%;
+  margin: 0px;
+  padding-left:20px;
+}
+
+.navigation-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  width: 250px;
+  height: 100%;
+  /* background-color:chartreuse; */
+  list-style-type: none;
+  list-style: none;
+  
+}
+
+.navigation-list li{
+  align-content: center;
+  /* background-color: orchid;   */
+  padding-right: 20px;
+  border-right: solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.navigation-list li a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.contact-information{
+  border: none;
+  width: 60%;
+  /* background-color: blue; */
+}
+
+.contact-container-head{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  /* background-color: blanchedalmond; */
+  border: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px;
 }

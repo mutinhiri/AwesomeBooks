@@ -14,7 +14,7 @@ const addLi = (id, title, author) => {
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'remove-btn';
-  button.innerText = 'remove';
+  button.innerText = 'Remove';
   list.appendChild(button);
   return list;
 };
