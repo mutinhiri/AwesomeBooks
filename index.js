@@ -13,6 +13,7 @@ const addLi = (id, title, author) => {
   list.innerText = `"${title}"  by   ${author}`;
   const button = document.createElement('button');
   button.type = 'button';
+  button.className = 'remove-btn'
   button.innerText = 'remove';
   list.appendChild(button);
   return list;
