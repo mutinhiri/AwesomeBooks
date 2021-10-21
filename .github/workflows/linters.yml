@@ -1,37 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@JasemDuncan 
-microverseinc
-/
-linters-config
-Public
-12
-122
-464
-Code
-Issues
-10
-Pull requests
-1
-Actions
-Projects
-Wiki
-Security
-Insights
-linters-config/javascript/.github/workflows/linters.yml
-@SpaYco
-SpaYco Bump up outdated packages (#142)
-Latest commit dfd8253 on Apr 15
- History
- 3 contributors
-@MauricioRobayo@bolah2009@SpaYco
-36 lines (33 sloc)  1.14 KB
-   
 name: Linters
 
 on: pull_request
