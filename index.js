@@ -65,16 +65,17 @@ window.onload = () => {
     BooksList.data = JSON.parse(localStorage.books);
     BooksList.refresh();
   }
+  document.getElementById('time').innerHTML = Date();
 };
 
 const pageContent = document.querySelectorAll('.add-new, .contact-information');
-pageContent.forEach((e)=>{e.style.display = 'none'});
+pageContent.forEach((e) => { e.style.display = 'none'; });
 
 const view = document.querySelectorAll('a');
-const section = document.querySelectorAll('.fieldset-list, .add-new, .contact-information');
-for (let i = 0; i<view.length; i+=1){
-  view[i].addEventListener('click', ()=> {
-    section.forEach((e)=>{e.style.display = 'none'});
-    section[i].style.display = 'flex'
+const section = document.querySelectorAll('.section-list, .add-new, .contact-information');
+for (let i = 0; i < view.length; i += 1) {
+  view[i].addEventListener('click', () => {
+    section.forEach((e) => { e.style.display = 'none'; });
+    section[i].style.display = 'flex';
   });
 }

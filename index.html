@@ -21,23 +21,26 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="date">
+        <p id="time"></p>
+    </div>
   </header>
+  
   <div class="full-content">
-    <h1>Awesome books</h1>
 
-    <fieldset id="list" class="fieldset-list">
-      <!-- <legend>Books</legend> -->
-      <div class="black-border">
-        <ul id="booklist" class="flex-center"></ul>
-      </div>
-    </fieldset>
-    
+    <section id="section-list" class="section-list">
+      <h1>Awesome books</h1>
+      <fieldset id="list" class="fieldset-list">      
+        <div class="black-border">
+          <ul id="booklist" class="flex-center"></ul>
+        </div>
+      </fieldset>
+    </section>
     <br>
-    <hr class="underline">
-    
+    <hr class="underline">    
+
     <section id="add-new" class="add-new">
-      <fieldset class="add-new-book">
-        <!-- <legend>Add books</legend> -->
+      <fieldset class="add-new-book">        
       <h1>Add a new book</h1>
       <input type="text" id="title" required placeholder="Title" Class="input-label">
       <input type="text" id="author" required placeholder="Author" Class="input-label">
@@ -45,9 +48,7 @@
         <button id="btnAdd" type="button" class="add-buutton">Add</button>
       </div>      
       </fieldset>
-
-    </section>
-     
+    </section>     
 
     <fieldset class="contact-information" id="contact">
       <div class="contact-container-head">
@@ -63,14 +64,14 @@
             <li>Our address Streetname 22, 84503 City, Country.</li>
           </ul>
         </p>
-
       </div>
     </fieldset>    
+
     <script src="index.js"></script>
   </div>  
   <footer>     
     <nav class="navigation-menu">
-      <h2>Copyright</h2>     
+      <h2>Copyright &nbsp; _</h2>     
     </nav>
   </footer>
 </body>
