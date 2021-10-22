@@ -12,12 +12,12 @@
   </head>
 </head>
 <body>
-  <header>
+  <header class="header">
     <nav class="navigation-menu">
       <h2>Aweeome books</h2>
       <ul class="navigation-list">
         <li class="navigation-list-item"><a href="#">List</a></li>
-        <li><a href="#add">Add Book</a></li>
+        <li><a href="#add-new">Add Book</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -34,17 +34,22 @@
     
     <br>
     <hr class="underline">
-    <fieldset class="add-new-book">
-      <!-- <legend>Add books</legend> -->
+    
+    <section id="add-new" class="add-new">
+      <fieldset class="add-new-book">
+        <!-- <legend>Add books</legend> -->
       <h1>Add a new book</h1>
       <input type="text" id="title" required placeholder="Title" Class="input-label">
       <input type="text" id="author" required placeholder="Author" Class="input-label">
       <div class="button-content">
         <button id="btnAdd" type="button" class="add-buutton">Add</button>
       </div>      
-    </fieldset>
+      </fieldset>
 
-    <fieldset class="contact-information">
+    </section>
+     
+
+    <fieldset class="contact-information" id="contact">
       <div class="contact-container-head">
         <h1>Contact information</h1>
       </div>

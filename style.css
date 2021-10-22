@@ -69,10 +69,11 @@ p:nth-of-type(2) {
   margin: 0;
   padding: 0;
   border: 0;
-}
+  margin-left: 90px;
+  }
 
 .input-label {
-  width: 40%;
+  width: 90%;
   margin-bottom: 10px;
   border-width: 4px;
   border-color: black;
@@ -86,7 +87,7 @@ p:nth-of-type(2) {
   align-content: flex-end;
   margin: 0;
   padding: 0;
-  width: 42%;
+  width: 100%;
 }
 
 .add-buutton {
@@ -194,4 +195,10 @@ h2{
   font-size: 14px;
   font-weight: bold;
   padding: 5px;
+}
+
+footer {
+  position: absolute;
+  bottom: 5px;
+  width: 97vw;
 }
