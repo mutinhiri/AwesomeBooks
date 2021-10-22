@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>awesome books </title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <title>awesome Books</title>
+  </head>
 </head>
 <body>
-  <h1>Awesome books</h1>
-
-  <fieldset id="list">
-    <legend>Books</legend>
-    <div class="black-border">
-      <ul id="booklist" class="flex-center"></ul>
+  <header class="header">
+    <nav class="navigation-menu">
+      <h2>Aweeome books</h2>
+      <ul class="navigation-list">
+        <li class="navigation-list-item"><a href="#">List</a></li>
+        <li><a href="#add-new">Add Book</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="date">
+        <p id="time"></p>
     </div>
-  </fieldset>
+  </header>
+  
+  <div class="full-content">
 
-  <br>
-  <fieldset>
-    <legend>Add books</legend>
-    <input type="text" id="title" required placeholder="Book title">
-    <input type="text" id="author" required placeholder="Book author">
-    <button id="btnAdd" type="button">Add</button>
-  </fieldset>
-  <script src="index.js"></script>
+    <section id="section-list" class="section-list">
+      <h1>Awesome books</h1>
+      <fieldset id="list" class="fieldset-list">      
+        <div class="black-border">
+          <ul id="booklist" class="flex-center"></ul>
+        </div>
+      </fieldset>
+    </section>
+    <br>
+    <hr class="underline">    
+
+    <section id="add-new" class="add-new">
+      <fieldset class="add-new-book">        
+      <h1>Add a new book</h1>
+      <input type="text" id="title" required placeholder="Title" Class="input-label">
+      <input type="text" id="author" required placeholder="Author" Class="input-label">
+      <div class="button-content">
+        <button id="btnAdd" type="button" class="add-buutton">Add</button>
+      </div>      
+      </fieldset>
+    </section>     
+
+    <fieldset class="contact-information" id="contact">
+      <div class="contact-container-head">
+        <h1>Contact information</h1>
+      </div>
+      <div class="contact-container-body">
+        <p>Do have any questions or you just want to say "Hello"?</p> 
+        <p>You can reach out to us!</p>
+        <p>
+          <ul>
+            <li>Our e-mail: mail@mail.com</li>
+            <li>Our phone number: 00438666634422</li>
+            <li>Our address Streetname 22, 84503 City, Country.</li>
+          </ul>
+        </p>
+      </div>
+    </fieldset>    
+
+    <script src="index.js"></script>
+  </div>  
+  <footer>     
+    <nav class="navigation-menu">
+      <h2>Copyright &nbsp; _</h2>     
+    </nav>
+  </footer>
 </body>
 </html>
