@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>awesome books </title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <title>awesome Books</title>
+  </head>
 </head>
 <body>
-  <h1>Awesome books</h1>
+  <header>
+    <nav>
+      <h2>aweeome books</h2>
+      <ul>
+        <li><a href="#">List</a></li>
+        <li><a href="#add">Add Book</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="full-content">
+    <h1>Awesome books</h1>
 
-  <fieldset id="list">
-    <legend>Books</legend>
-    <div class="black-border">
-      <ul id="booklist" class="flex-center"></ul>
-    </div>
-  </fieldset>
-
-  <br>
-  <fieldset>
-    <legend>Add books</legend>
-    <input type="text" id="title" required placeholder="Book title">
-    <input type="text" id="author" required placeholder="Book author">
-    <button id="btnAdd" type="button">Add</button>
-  </fieldset>
-  <script src="index.js"></script>
+    <fieldset id="list" class="fieldset-list">
+      <!-- <legend>Books</legend> -->
+      <div class="black-border">
+        <ul id="booklist" class="flex-center"></ul>
+      </div>
+    </fieldset>
+    
+    <br>
+    <hr class="underline">
+    <fieldset class="add-new-book">
+      <!-- <legend>Add books</legend> -->
+      <h1>Add a new book</h1>
+      <input type="text" id="title" required placeholder="Title" Class="input-label">
+      <input type="text" id="author" required placeholder="Author" Class="input-label">
+      <div class="button-content">
+        <button id="btnAdd" type="button" class="add-buutton">Add</button>
+      </div>      
+    </fieldset>
+    <script src="index.js"></script>
+  </div>  
 </body>
 </html>
